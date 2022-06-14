@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #192a56;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+
+}
+
+svg{
+  cursor: pointer;
+}
+
+.error{
+  text-align: center;
+  color: red;
+  flex-basis: 75%;
+  align-self: center;
+}

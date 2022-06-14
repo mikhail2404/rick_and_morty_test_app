@@ -1,0 +1,29 @@
+.character {
+  max-width: 300px;
+  box-shadow: 3px 3px 5px 5px rgb(0 0 0 / 10%);
+  cursor: pointer;
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    height: 80%;
+  }
+
+  &__rating{
+    margin-top: .5rem;
+    display: flex;
+    gap: 1rem;
+    svg{
+      width: 1.5rem;
+      fill: #fff;
+    }
+  }
+
+  h4,
+  p {
+    margin: 0;
+    color: $color-white;
+  }
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+}
