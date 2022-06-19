@@ -1,58 +1,66 @@
-.login{
-  height: calc(100vh - 70px);
+.login {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  &__wrapper{
+  height: calc(100vh - 70px);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
     width: 40%;
     height: 65%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
+
     background-color: $color-white;
+    gap: 2.5rem;
 
     @media screen and (max-width: 910px) {
-     height: 45%;
+      height: 45%;
     }
   }
 
-  &__button{
-    padding: 15px 25px;
-    border-radius: 5px;
-    color: white;
+  &__button {
     display: flex;
     align-items: center;
-    font-weight: bold;
+
+    padding: 15px 25px;
+
     cursor: pointer;
+
+    color: white;
     border: none;
+    border-radius: 5px;
+
     font-size: 1.2rem;
-    display: flex;
+    font-weight: bold;
     gap: 0.5rem;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
 
     @media screen and (max-width: 910px) {
       font-size: 0.7rem;
     }
-
-    svg{
-      width: 20px;
-      height: 20px;
-    }
   }
 
-  &__title{
+  &__title {
     color: $color-black;
+
     @media screen and (max-width: 910px) {
       font-size: 1.25rem;
     }
   }
 }
 
-.linkedin{
+.linkedin {
   background-color: $color-light-blue;
 }
-.facebook{
+
+.facebook {
   background-color: $color-blue;
 }

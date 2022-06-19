@@ -34,7 +34,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "stylelint": "stylelint \"**/*.scss\" --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +61,10 @@
     "@types/react-modal": "^3.13.1",
     "@types/redux-persist": "^4.3.1",
     "@types/uuid": "^8.3.4",
-    "prettier": "2.7.0"
+    "prettier": "2.7.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-order-config-standard": "^0.1.3"
   }
 }

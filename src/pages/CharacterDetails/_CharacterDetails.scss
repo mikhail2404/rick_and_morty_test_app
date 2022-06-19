@@ -1,24 +1,26 @@
 .character-details {
-  gap: 3.5rem;
-  margin: 2rem 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 0 2rem;
-  @media screen and (max-width: 910px) {
-    flex-direction: column;
-  }
+  justify-content: center;
 
-  &__image{
+  margin: 2rem 0;
+  padding: 0 2rem;
+  gap: 3.5rem;
+
+  &__image {
     align-self: flex-start;
   }
 
   &__info {
     display: flex;
+    align-items: flex-start;
+    align-self: flex-start;
     flex-basis: 55%;
     flex-direction: column;
-    align-self: flex-start;
     gap: 0.5rem;
-    align-items: flex-start;
+  }
+
+  @media screen and (max-width: 910px) {
+    flex-direction: column;
   }
 }

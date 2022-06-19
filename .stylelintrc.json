@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-order-config-standard"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {}
+}

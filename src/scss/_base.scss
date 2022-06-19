@@ -1,13 +1,14 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  background-color: #192a56;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  background-color: #192a56;
+
+  font-family: Poppins, sans-serif;
 }
 
 a {
@@ -16,16 +17,17 @@ a {
 
 ul {
   list-style-type: none;
-
 }
 
-svg{
+svg {
   cursor: pointer;
 }
 
-.error{
-  text-align: center;
-  color: red;
-  flex-basis: 75%;
+.error {
   align-self: center;
+  flex-basis: 75%;
+
+  text-align: center;
+
+  color: red;
 }

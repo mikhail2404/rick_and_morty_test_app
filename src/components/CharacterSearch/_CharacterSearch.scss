@@ -1,62 +1,80 @@
-.character-search{
+.character-search {
   &__form {
     position: relative;
+
     margin: 1rem auto;
   }
 
-  &__input{
+  &__input {
+    width: 300px;
+    padding: 0.2rem 0;
+    padding: 0.5rem 0;
+
+    text-indent: 10px;
+
     color: $color-green-light;
-    background: $color-blue-dark;
-    outline: none;
     border: 1px solid $color-green-light;
     border-radius: 10px;
-    padding: 0.2rem 0;
-    text-indent: 10px;
-    padding: .5rem 0;
-    width: 300px;
-    &--active{
-      border-bottom-left-radius: 0;
+    outline: none;
+    background: $color-blue-dark;
+
+    &--active {
       border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
     }
+
     @media screen and (max-width: 910px) {
       width: 150px;
     }
   }
 
-  &__results{
+  &__results {
     position: absolute;
-    width: 300px;
+    z-index: 10;
     top: 34px;
     left: 0;
-    max-height: 200px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    background-color: $color-blue-dark;
+
     overflow: hidden;
     overflow-y: auto;
-    z-index: 10;
+
+    width: 300px;
+    max-height: 200px;
+
+    background-color: $color-blue-dark;
+    box-shadow: rgb(17 12 46 / 15%) 0 48px 100px 0;
+
     &::-webkit-scrollbar {
       width: 5px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background: $color-green-light;
       border-radius: 10px;
+      background: $color-green-light;
+    }
+
+    @media screen and (max-width: 910px) {
+      width: 170px;
     }
   }
 
-  &__result{
+  &__result {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    padding: .5rem;
+
+    padding: 0.5rem;
+
     cursor: pointer;
+
     color: $color-white;
-    img{
+
+    img {
       width: 32px;
       height: 48px;
       object-fit: cover;
     }
-    &:hover{
+
+    &:hover {
       background-color: $color-green-light;
     }
   }

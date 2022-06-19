@@ -1,10 +1,14 @@
 .character {
   max-width: 300px;
-  box-shadow: 3px 3px 5px 5px rgb(0 0 0 / 10%);
+
   cursor: pointer;
+
+  box-shadow: 3px 3px 5px 5px rgb(0 0 0 / 10%);
+
   &__image {
     width: 100%;
     object-fit: cover;
+
     height: 80%;
   }
 
@@ -13,16 +17,20 @@
   }
 
   &__rating {
-    margin-top: 0.5rem;
     display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
+
+    margin-top: 0.5rem;
+    gap: 1rem;
+
     svg {
       width: 1.5rem;
       height: 1.5rem;
+
       transition: all 0.2s ease;
     }
+
     .character__like:hover,
     .character__like--active {
       transform: scale(1.2);
@@ -39,8 +47,10 @@
   h4,
   p {
     margin: 0;
+
     color: $color-white;
   }
+
   h4 {
     margin-bottom: 0.5rem;
   }

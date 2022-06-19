@@ -1,15 +1,19 @@
 .btn {
-  padding: .5rem 1rem;
-  border-radius: 12px;
-  border: none;
-  transition: all .2s ease;
+  padding: 0.5rem 1rem;
+
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  border: none;
+  border-radius: 12px;
 
   &--primary {
+    color: $color-white;
     border: 2px solid $color-green-light;
     background-color: $color-green-light;
-    color: $color-white;
+
     font-weight: bold;
+
     &:hover {
       color: $color-green-light;
       background-color: transparent;
@@ -18,23 +22,27 @@
 
   &-outline-secondary {
     margin-left: -1px;
-    border-radius: 0 .25rem .25rem 0;
 
     color: #6c757d;
     border-color: #6c757d;
+    border-radius: 0 0.25rem 0.25rem 0;
+
     font-weight: bold;
+
     &:hover {
       color: #fff;
-      background-color: #6c757d;
       border-color: #6c757d;
+      background-color: #6c757d;
     }
   }
 
   &--secondary {
+    color: $color-white;
     border: 2px solid $color-red;
     background-color: $color-red;
-    color: $color-white;
+
     font-weight: bold;
+
     &:hover {
       color: $color-red;
       background-color: transparent;

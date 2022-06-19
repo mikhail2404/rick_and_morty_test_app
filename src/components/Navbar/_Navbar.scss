@@ -1,37 +1,40 @@
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   height: 70px;
   padding: 0 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media screen and (max-width: 910px) {
-    font-size: 0.7rem;
-    padding: 0.5rem;
-  }
 
   &__menu {
     display: flex;
     gap: 1.5rem;
+
     align-items: center;
   }
 
   &__link {
-    color: #fff;
     position: relative;
+
     padding: 5px 0;
+
+    color: #fff;
+
     font-weight: 700;
 
     &::after {
-      content: "";
       position: absolute;
       bottom: 0;
       left: 50%;
-      transform: translateX(-50%);
+
       width: 0;
-      transition: width 0.5s ease;
       height: 2px;
-      background-color: #ff0000;
+
+      content: "";
+      transition: width 0.5s ease;
+      transform: translateX(-50%);
+
+      background-color: #f00;
     }
 
     &:hover {
@@ -51,5 +54,11 @@
 
   &__logout{
 
+  }
+
+  @media screen and (max-width: 910px) {
+    padding: 0.5rem;
+
+    font-size: 0.7rem;
   }
 }
