@@ -59,6 +59,7 @@ const CharacterSearch = () => {
 
   const searchCharacterHandler = (id: number) => {
     setIsDisplayed(false);
+    setCharacterName('')
     navigate(`/character/${id}`);
   };
 
