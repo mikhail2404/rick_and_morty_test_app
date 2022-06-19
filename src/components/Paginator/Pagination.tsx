@@ -1,7 +1,9 @@
-import React, { FC } from "react";
+import React, {FC, useEffect} from "react";
 import classnames from "classnames";
 import { usePagination, DOTS } from "../../hooks/usePagination";
 import { v4 as uuid } from "uuid";
+import {fetchCharacters} from "../../store/slices/charactersSlice";
+import {useAppDispatch} from "../../hooks/useAppDispatch";
 
 interface PaginationProps {
   onPageChange: (currentPage: number) => void;
@@ -22,12 +24,18 @@ const Pagination: FC<PaginationProps> = (props) => {
     className,
   } = props;
 
+  const dispatch = useAppDispatch();
   const paginationRange = usePagination({
     currentPage,
     totalCount,
     siblingCount,
     pageSize,
   });
+
+  useEffect(() => {
+    dispatch(fetchCharacters(currentPage));
+  }, [currentPage]);
+
   // If there are less than 2 times in pagination range we shall not render the component
   if (currentPage === 0 || paginationRange.length < 2) {
     return null;

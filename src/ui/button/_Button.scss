@@ -16,6 +16,20 @@
     }
   }
 
+  &-outline-secondary {
+    margin-left: -1px;
+    border-radius: 0 .25rem .25rem 0;
+
+    color: #6c757d;
+    border-color: #6c757d;
+    font-weight: bold;
+    &:hover {
+      color: #fff;
+      background-color: #6c757d;
+      border-color: #6c757d;
+    }
+  }
+
   &--secondary {
     border: 2px solid $color-red;
     background-color: $color-red;

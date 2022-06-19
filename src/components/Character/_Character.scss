@@ -8,13 +8,31 @@
     height: 80%;
   }
 
-  &__rating{
-    margin-top: .5rem;
+  &__clickable {
+    cursor: pointer;
+  }
+
+  &__rating {
+    margin-top: 0.5rem;
     display: flex;
     gap: 1rem;
-    svg{
+    justify-content: flex-end;
+    align-items: center;
+    svg {
       width: 1.5rem;
-      fill: #fff;
+      height: 1.5rem;
+      transition: all 0.2s ease;
+    }
+    .character__like:hover,
+    .character__like--active {
+      transform: scale(1.2);
+      stroke: $color-green-light;
+    }
+
+    .character__dislike:hover,
+    .character__dislike--active {
+      transform: scale(1.2);
+      stroke: $color-dark-red;
     }
   }
 

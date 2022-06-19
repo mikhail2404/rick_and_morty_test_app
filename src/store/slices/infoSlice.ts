@@ -1,14 +1,15 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Info, InfoState } from "../../types/store/info";
+import {CHARACTERS_URL} from "../../common/const";
 
 export const fetchInfo = createAsyncThunk<
   Info,
   undefined,
   { rejectValue: string }
 >("info/fetchInfo", async function (_, { rejectWithValue }) {
-  const response = await fetch("https://rickandmortyapi.com/api/character");
+  const response = await fetch(CHARACTERS_URL);
   if (!response.ok) {
-    return rejectWithValue("Server Error");
+    return rejectWithValue("Something went wrong");
   }
   const data = await response.json();
   return data.info;

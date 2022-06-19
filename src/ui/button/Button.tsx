@@ -1,14 +1,13 @@
 import React, {ButtonHTMLAttributes, FC, SyntheticEvent} from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    label: string,
     onClick?: (e: SyntheticEvent) => void
 }
 
-const Button: FC<ButtonProps> = ({onClick, label, ...props}) => {
+const Button: FC<ButtonProps> = ({children, onClick,  ...props}) => {
     return (
         <button {...props} onClick={onClick}>
-            {label}
+            {children}
         </button>
     );
 };

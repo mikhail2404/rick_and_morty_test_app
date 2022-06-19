@@ -1,5 +1,6 @@
 export interface CharactersState {
   characters: CharacterInterface[];
+  currentCharacter: CharacterInterface | null ;
   loading: boolean;
   error: null | string;
 }
@@ -13,6 +14,7 @@ export interface CharacterInterface {
   species: string;
   type: string;
   gender: string;
+  isFavorite?: boolean;
   origin: {
     name: string;
     url: string;

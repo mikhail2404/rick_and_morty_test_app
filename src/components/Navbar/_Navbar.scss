@@ -5,9 +5,15 @@
   justify-content: space-between;
   align-items: center;
 
+  @media screen and (max-width: 910px) {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+
   &__menu {
     display: flex;
     gap: 1.5rem;
+    align-items: center;
   }
 
   &__link {
@@ -41,5 +47,9 @@
     &::after {
       width: 100%;
     }
+  }
+
+  &__logout{
+
   }
 }

@@ -1,0 +1,24 @@
+.character-details {
+  gap: 3.5rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  @media screen and (max-width: 910px) {
+    flex-direction: column;
+  }
+
+  &__image{
+    align-self: flex-start;
+  }
+
+  &__info {
+    display: flex;
+    flex-basis: 55%;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
