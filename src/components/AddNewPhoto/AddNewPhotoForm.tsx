@@ -6,9 +6,7 @@ interface AddNewPhotoFormProps {
   addPhoto: (photo: string) => void;
 }
 
-const AddNewPhotoForm: FC<AddNewPhotoFormProps> = ({
-  addPhoto,
-}) => {
+const AddNewPhotoForm: FC<AddNewPhotoFormProps> = ({ addPhoto }) => {
   const newPhotoRef = useRef<HTMLInputElement>(null);
 
   const handleAddNewPhoto = (e: FormEvent<HTMLFormElement>) => {
@@ -22,6 +20,7 @@ const AddNewPhotoForm: FC<AddNewPhotoFormProps> = ({
       <ToastContainer />
       <form onSubmit={handleAddNewPhoto}>
         <div className="input-group">
+          {/*enter image url to add it*/}
           <input
             placeholder="New photo URL"
             aria-label="New photo URL"

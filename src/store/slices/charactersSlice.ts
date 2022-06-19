@@ -32,8 +32,7 @@ export const fetchCurrentCharacter = createAsyncThunk<
   if (!response.ok) {
     return rejectWithValue("Something went wrong");
   }
-  const data = await response.json();
-  return data;
+  return await response.json();
 });
 
 const initialState: CharactersState = {
@@ -46,18 +45,14 @@ const initialState: CharactersState = {
 const charactersSlice = createSlice({
   name: "characters",
   initialState,
-  reducers: {
-    setCharacters(state, action: PayloadAction<CharacterInterface[]>) {
-      state.characters = action.payload;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchCharacters.fulfilled, (state, action) => {
         state.characters = action.payload;
         state.loading = false;
       })
-      .addCase(fetchCharacters.pending, (state, action) => {
+      .addCase(fetchCharacters.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
@@ -65,7 +60,7 @@ const charactersSlice = createSlice({
         state.currentCharacter = action.payload;
         state.loading = false;
       })
-      .addCase(fetchCurrentCharacter.pending, (state, action) => {
+      .addCase(fetchCurrentCharacter.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
@@ -79,7 +74,5 @@ const charactersSlice = createSlice({
 const isError = (action: AnyAction) => {
   return action.type.endsWith("rejected");
 };
-
-export const { setCharacters } = charactersSlice.actions;
 
 export default charactersSlice.reducer;

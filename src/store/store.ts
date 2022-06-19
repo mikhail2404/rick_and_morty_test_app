@@ -21,13 +21,13 @@ const reducers = combineReducers({
   info: infoSlice,
   auth: authSlice,
   favourite: favouriteSlice,
-  photos: photosSlice
+  photos: photosSlice,
 });
 
 const persistConfig = {
   key: "root",
   storage,
-  blacklist: ['characters', 'info']
+  blacklist: ["characters", "info"],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
@@ -35,11 +35,11 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
-      }),
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
 
 export const persistor = persistStore(store);

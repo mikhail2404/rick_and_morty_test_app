@@ -1,14 +1,13 @@
 export interface PhotosState {
-    photos: Photos[]
+  photos: Photos[];
 }
 
 export interface Photos {
-    userPhotos: Photo[];
-    id: number;
+  userPhotos: Photo[];
+  id: number;
 }
 
-
-export interface Photo{
-    url: string;
-    id: string;
+export interface Photo {
+  url: string;
+  id: string;
 }

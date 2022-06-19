@@ -1,6 +1,6 @@
-import {CharacterInterface} from "./characters";
+import { CharacterInterface } from "./characters";
 
 export interface FavouriteState {
-    favourite: CharacterInterface[],
-    disliked: CharacterInterface[]
+  favourite: CharacterInterface[];
+  disliked: CharacterInterface[];
 }

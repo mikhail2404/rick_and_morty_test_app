@@ -12,7 +12,7 @@ const FavouriteList = () => {
 
   useEffect(() => {
     dispatch(setCurrentPage(1));
-  }, []);
+  }, [dispatch]);
 
   const handlePageChange = (page: number) => {
     dispatch(setCurrentPage(page));
@@ -33,10 +33,7 @@ const FavouriteList = () => {
         {favourite
           .slice((currentPage - 1) * 20, currentPage * 20)
           .map((character) => (
-            <Character
-              key={character.id}
-              character={character}
-            />
+            <Character key={character.id} character={character} />
           ))}
       </div>
     </div>

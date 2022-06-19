@@ -5,7 +5,6 @@ import Pagination from "../../components/Paginator/Pagination";
 import { useAppSelector } from "../../hooks/useAppSelector";
 import Character from "../../components/Character/Character";
 
-
 const Characters = () => {
   const dispatch = useAppDispatch();
   const { characters, error: charactersError } = useAppSelector(
@@ -27,20 +26,17 @@ const Characters = () => {
         <>
           <div className="characters__paginator">
             <Pagination
-                className="pagination-bar"
-                currentPage={currentPage}
-                siblingCount={1}
-                totalCount={count}
-                pageSize={20}
-                onPageChange={handlePageChange}
+              className="pagination-bar"
+              currentPage={currentPage}
+              siblingCount={1}
+              totalCount={count}
+              pageSize={20}
+              onPageChange={handlePageChange}
             />
           </div>
           <div className="characters__content">
             {characters.map((character) => (
-              <Character
-                key={character.id}
-                character={character}
-              />
+              <Character key={character.id} character={character} />
             ))}
           </div>
         </>

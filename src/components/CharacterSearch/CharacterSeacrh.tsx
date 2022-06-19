@@ -18,7 +18,7 @@ const CharacterSearch = () => {
     const urls = Array.from(
       { length: pages },
       (_, i) => `${CHARACTERS_URL}/?page=${i + 1}`
-    );
+    ); // creates an array of page urls
     (async () => {
       await Promise.all(
         urls.map(async (url) => {
@@ -27,16 +27,14 @@ const CharacterSearch = () => {
           setAllCharacters((prev) => [...prev, ...result.results]);
         })
       );
-    })();
+    })(); // fetches characters from each page and passes it to allCharacters state
   }, [pages]);
 
   useEffect(() => {
     if (characterName.trim().length) {
-      const results = allCharacters.filter((character) => {
-        return character.name
-          .toLowerCase()
-          .includes(characterName.toLowerCase());
-      });
+      const results = allCharacters.filter((character) =>
+        character.name.toLowerCase().includes(characterName.toLowerCase())
+      );
       setSearchResults(results);
     } else {
       setSearchResults([]);

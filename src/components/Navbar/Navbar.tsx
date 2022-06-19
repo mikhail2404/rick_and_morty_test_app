@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
           Characters
         </NavLink>
         <NavLink
-          to={isAuthed ? 'favourite-list' : 'login'}
+          to={isAuthed ? "favourite-list" : "login"}
           className={({ isActive }) =>
             `navbar__link ${isActive && isAuthed ? "navbar__link--active" : ""}`
           }

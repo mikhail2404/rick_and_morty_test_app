@@ -24,7 +24,7 @@ const Slider: FC<SliderProps> = ({ photos }) => {
         >
           {photos.map((photo) => (
             <SwiperSlide key={photo.id}>
-              <img src={photo.url} />
+              <img src={photo.url} alt="user photos" />
             </SwiperSlide>
           ))}
         </Swiper>

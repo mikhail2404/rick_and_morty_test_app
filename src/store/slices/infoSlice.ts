@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Info, InfoState } from "../../types/store/info";
-import {CHARACTERS_URL} from "../../common/const";
+import { CHARACTERS_URL } from "../../common/const";
 
 export const fetchInfo = createAsyncThunk<
   Info,

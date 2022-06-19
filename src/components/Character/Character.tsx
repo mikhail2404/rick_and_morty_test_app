@@ -14,9 +14,7 @@ interface CharacterProps {
   character: CharacterInterface;
 }
 
-const Character: FC<CharacterProps> = ({
-  character,
-}) => {
+const Character: FC<CharacterProps> = ({ character }) => {
   const { favourite, disliked } = useAppSelector((state) => state.favourite);
   const { isAuthed } = useAppSelector((state) => state.auth);
   const dispatch = useAppDispatch();
@@ -41,9 +39,16 @@ const Character: FC<CharacterProps> = ({
   };
 
   return (
-    <Card func={() => navigate(`/character/${character.id}`)} className="character">
+    <Card
+      func={() => navigate(`/character/${character.id}`)}
+      className="character"
+    >
       <div className="character__clickable">
-        <img src={character.image} alt={character.name} className="character__image" />
+        <img
+          src={character.image}
+          alt={character.name}
+          className="character__image"
+        />
         <h4>{character.name}</h4>
       </div>
       <p>{character.status}</p>

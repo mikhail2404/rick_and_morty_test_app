@@ -32,14 +32,14 @@ const AddNewPhoto: FC = () => {
     if (currentCharacter) {
       dispatch(addCharacterPhoto(currentCharacter));
     }
-  }, []);
+  }, [currentCharacter, dispatch]);
 
   useEffect(() => {
     const characterPhotos = photos.find(
       (photo) => currentCharacter && photo.id === currentCharacter.id
     );
     if (characterPhotos) setCurrentPhotos(characterPhotos.userPhotos);
-  }, [photos]);
+  }, [photos, currentCharacter]);
   const handleAddPhoto = (url: string) => {
     if (currentCharacter)
       dispatch(

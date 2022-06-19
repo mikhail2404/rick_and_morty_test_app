@@ -1,11 +1,9 @@
 export interface CharactersState {
   characters: CharacterInterface[];
-  currentCharacter: CharacterInterface | null ;
+  currentCharacter: CharacterInterface | null;
   loading: boolean;
   error: null | string;
 }
-
-
 
 export interface CharacterInterface {
   id: number;
@@ -28,4 +26,3 @@ export interface CharacterInterface {
   url: string;
   created: string;
 }
-

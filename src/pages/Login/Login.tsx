@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../ui/button/Button";
 
 const Login: React.FC = () => {
+  //use one of the following local hosts to log in (https://localhost:3000||8080||9000)
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
@@ -22,9 +23,8 @@ const Login: React.FC = () => {
   const { linkedInLogin } = useLinkedIn({
     clientId: "78bls5mxywck1l",
     redirectUri: `${window.location.origin}/linkedin`,
-    onSuccess: (response) => {
+    onSuccess: () => {
       logIn();
-      console.log(response);
     },
     scope: "r_emailaddress r_liteprofile",
   });
