@@ -41,13 +41,9 @@ const Pagination: FC<PaginationProps> = (props) => {
     return null;
   }
 
-  const onNext = () => {
-    onPageChange(currentPage + 1);
-  };
+  const onNext = () => onPageChange(currentPage + 1);
 
-  const onPrevious = () => {
-    onPageChange(currentPage - 1);
-  };
+  const onPrevious = () => onPageChange(currentPage - 1);
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (

@@ -14,9 +14,7 @@ const FavouriteList = () => {
     dispatch(setCurrentPage(1));
   }, [dispatch]);
 
-  const handlePageChange = (page: number) => {
-    dispatch(setCurrentPage(page));
-  };
+  const handlePageChange = (page: number) => dispatch(setCurrentPage(page));
   return (
     <div className="characters">
       <div className="characters__paginator">

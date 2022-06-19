@@ -40,6 +40,7 @@ const AddNewPhoto: FC = () => {
     );
     if (characterPhotos) setCurrentPhotos(characterPhotos.userPhotos);
   }, [photos, currentCharacter]);
+
   const handleAddPhoto = (url: string) => {
     if (currentCharacter)
       dispatch(
@@ -49,7 +50,6 @@ const AddNewPhoto: FC = () => {
         })
       );
   };
-
   return (
     <div className="photos__container">
       <Slider photos={currentPhotos} />

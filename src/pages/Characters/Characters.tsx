@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import { setCurrentPage } from "../../store/slices/infoSlice";
 import Pagination from "../../components/Paginator/Pagination";
@@ -16,10 +16,10 @@ const Characters = () => {
     error: infoError,
   } = useAppSelector((state) => state.info);
 
-  const handlePageChange = (page: number) => {
-    dispatch(setCurrentPage(page));
-  };
-
+  const handlePageChange = useCallback(
+    (page: number) => dispatch(setCurrentPage(page)),
+    [dispatch]
+  );
   return (
     <div className="characters">
       {!charactersError && !infoError ? (
