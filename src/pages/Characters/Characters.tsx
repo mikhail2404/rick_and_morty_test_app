@@ -20,6 +20,7 @@ const Characters = () => {
     (page: number) => dispatch(setCurrentPage(page)),
     [dispatch]
   );
+
   return (
     <div className="characters">
       {!charactersError && !infoError ? (

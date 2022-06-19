@@ -20,7 +20,7 @@ const Slider: FC<SliderProps> = ({ photos }) => {
           navigation={photos.length > 1}
           modules={[FreeMode, Navigation]}
           loop={true}
-          className="mySwiper2"
+          className="photo-swiper"
         >
           {photos.map((photo) => (
             <SwiperSlide key={photo.id}>

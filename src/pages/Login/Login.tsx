@@ -1,10 +1,8 @@
 import React from "react";
 import FacebookLogin from "@greatsumini/react-facebook-login";
-
 import { useLinkedIn } from "react-linkedin-login-oauth2";
 import { ReactComponent as Linkedin } from "../../assets/icons/linkedin.svg";
 import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
-
 import Card from "../../ui/card/Card";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import { setIsAuthed } from "../../store/slices/authSlice";
@@ -23,15 +21,11 @@ const Login: React.FC = () => {
   const { linkedInLogin } = useLinkedIn({
     clientId: "78bls5mxywck1l",
     redirectUri: `${window.location.origin}/linkedin`,
-    onSuccess: () => {
-      logIn();
-    },
+    onSuccess: () => logIn(),
     scope: "r_emailaddress r_liteprofile",
   });
 
-  const responseFacebook = () => {
-    logIn();
-  };
+  const responseFacebook = () => logIn();
 
   return (
     <div className="login">

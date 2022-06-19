@@ -18,7 +18,7 @@
 
     padding: 5px 0;
 
-    color: #fff;
+    color: $color-white;
 
     font-weight: 700;
 
@@ -34,11 +34,11 @@
       transition: width 0.5s ease;
       transform: translateX(-50%);
 
-      background-color: #f00;
+      background-color: $color-dark-red;
     }
 
     &:hover {
-      color: red;
+      color: $color-dark-red;
     }
 
     &:hover::after {

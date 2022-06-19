@@ -28,6 +28,7 @@ const AddNewPhoto: FC = () => {
   const { isAuthed } = useAppSelector((state) => state.auth);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+
   useEffect(() => {
     if (currentCharacter) {
       dispatch(addCharacterPhoto(currentCharacter));
@@ -50,6 +51,7 @@ const AddNewPhoto: FC = () => {
         })
       );
   };
+
   return (
     <div className="photos__container">
       <Slider photos={currentPhotos} />

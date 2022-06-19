@@ -5,8 +5,8 @@
 }
 
 body {
-  color: #fff;
-  background-color: #192a56;
+  color: $color-white;
+  background-color: $color-blue-dark;
 
   font-family: Poppins, sans-serif;
 }
@@ -29,5 +29,5 @@ svg {
 
   text-align: center;
 
-  color: red;
+  color: $color-dark-red;
 }

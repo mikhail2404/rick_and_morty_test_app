@@ -23,16 +23,16 @@
   &-outline-secondary {
     margin-left: -1px;
 
-    color: #6c757d;
-    border-color: #6c757d;
+    color: $color-gray;
+    border-color: $color-gray;
     border-radius: 0 0.25rem 0.25rem 0;
 
     font-weight: bold;
 
     &:hover {
-      color: #fff;
-      border-color: #6c757d;
-      background-color: #6c757d;
+      color: $color-white;
+      border-color: $color-gray;
+      background-color: $color-gray;
     }
   }
 

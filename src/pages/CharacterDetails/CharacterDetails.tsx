@@ -11,6 +11,7 @@ const CharacterDetails: React.FC = () => {
   );
   const { id } = useParams();
   const dispatch = useAppDispatch();
+
   useEffect(() => {
     if (id) dispatch(fetchCurrentCharacter(id));
   }, [id, dispatch]);
@@ -18,6 +19,7 @@ const CharacterDetails: React.FC = () => {
   if (error) {
     return <p className="error">{error}</p>;
   }
+
   return (
     <>
       {currentCharacter && id && currentCharacter.id === +id && (
